@@ -65,6 +65,7 @@ def collect_choices(store, regex=None):
                 full_path = os.path.join(dirsubpath, f[:-4])
                 if not regex or re.match(regex, full_path):
                     choices += [full_path]
+    choices.sort()
     return choices
 
 
